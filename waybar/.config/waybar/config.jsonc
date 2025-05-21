@@ -3,9 +3,13 @@
   "margin-top": 8,
   "margin-right": 8,
   "margin-left": 8,
-  "modules-left": ["hyprland/workspaces", "cpu", "memory", "temperature"],
+  "modules-left": ["hyprland/workspaces", "cpu", "memory", "temperature","custom/wallpaper"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock","tray"],
+  "custom/wallpaper": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/wallpapers.sh"
+  },
   "tray": {
     "spacing": 10,
     "icons": {
