@@ -42,3 +42,13 @@ window#waybar {
   padding-right: 4px;
 }
 
+#workspaces button.focused {
+  border-radius: 0;
+  border-bottom: 1px solid white;
+}
+
+#workspaces button.active {
+  border-radius: 0;
+  border-bottom: 1px solid white;
+}
+
