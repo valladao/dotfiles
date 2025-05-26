@@ -1,0 +1,46 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.iconTheme": "ayu",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.semi": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "files.trimTrailingWhitespace": true,
+  "prettier.trailingComma": "none",
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.tabSize": 2,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "git.enableSmartCommit": true,
+  "terminal.integrated.tabs.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "emmet.includeLanguages": {
+    "liquid": "html"
+  },
+  "workbench.sideBar.location": "right",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "files.associations": {
+    "*.liquid": "liquid"
+  },
+  "[liquid]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "files.autoSave": "afterDelay",
+  "window.zoomLevel": 1,
+  "liveServer.settings.donotVerifyTags": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+}
