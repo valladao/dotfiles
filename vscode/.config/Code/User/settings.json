@@ -1,46 +1,70 @@
 {
+  // Startup
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Default Light Modern",
   "workbench.iconTheme": "ayu",
+  "workbench.sideBar.location": "right",
+  "window.zoomLevel": 1,
+
+  // Editor behavior
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "prettier.semi": false,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "files.trimTrailingWhitespace": true,
-  "prettier.trailingComma": "none",
   "editor.minimap.enabled": false,
   "editor.quickSuggestionsDelay": 0,
   "editor.tabSize": 2,
-  "liveServer.settings.CustomBrowser": "chrome",
-  "git.enableSmartCommit": true,
-  "terminal.integrated.tabs.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
-  "emmet.includeLanguages": {
-    "liquid": "html"
+
+  // File handling
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "afterDelay",
+  "files.associations": {
+    "*.liquid": "liquid"
   },
-  "workbench.sideBar.location": "right",
+
+  // Prettier
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+
+  // Formatter per language
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "files.associations": {
-    "*.liquid": "liquid"
-  },
   "[liquid]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "css.lint.unknownAtRules": "ignore",
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-  "files.autoSave": "afterDelay",
-  "window.zoomLevel": 1,
+
+  // Liquid / Emmet support
+  "emmet.includeLanguages": {
+    "liquid": "html"
+  },
+
+  // Git
+  "git.enableSmartCommit": true,
+
+  // Terminal
+  "terminal.integrated.tabs.enabled": false,
+
+  // Live Server
+  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotVerifyTags": true,
-  "prisma.showPrismaDataPlatformNotification": false,
   "liveServer.settings.donotShowInfoMsg": true,
+
+  // Prisma
+  "prisma.showPrismaDataPlatformNotification": false,
+
+  // Shopify Theme Check
+  "themeCheck.checkOnChange": true,
+  "themeCheck.checkOnOpen": true,
+  "themeCheck.checkOnSave": true,
+
+  // Workspace trust behavior
+  "security.workspace.trust.untrustedFiles": "open"
 }
