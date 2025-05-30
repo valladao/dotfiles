@@ -58,3 +58,7 @@ function ai_complete() {
     }' | jq -r '.choices[0].message.content')
   echo "$response"
 }
+
+# Add scripts in scripts folder to path 
+export PATH="$HOME/scripts:$PATH"
+
