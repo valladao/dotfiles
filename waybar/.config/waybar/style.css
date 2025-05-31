@@ -52,3 +52,10 @@ window#waybar {
   border-bottom: 1px solid white;
 }
 
+#workspaces button:hover
+{
+  border-radius: 0;
+  background: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
