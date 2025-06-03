@@ -62,3 +62,6 @@ function ai_complete() {
 # Add scripts in scripts folder to path 
 export PATH="$HOME/scripts:$PATH"
 
+# Use neovim as file editor
+export EDITOR=nvim
+
