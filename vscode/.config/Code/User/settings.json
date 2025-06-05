@@ -2,10 +2,9 @@
   // Startup
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Default Light Modern",
-  "workbench.iconTheme": "ayu",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "window.zoomLevel": 1,
-
   // Editor behavior
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -15,18 +14,15 @@
   "editor.tabSize": 2,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
-
   // File handling
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "afterDelay",
   "files.associations": {
     "*.liquid": "liquid"
   },
-
   // Prettier
   "prettier.semi": false,
   "prettier.trailingComma": "none",
-
   // Formatter per language
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -40,31 +36,24 @@
   "[liquid]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-
   // Liquid / Emmet support
   "emmet.includeLanguages": {
     "liquid": "html"
   },
-
   // Git
   "git.enableSmartCommit": true,
-
   // Terminal
   "terminal.integrated.tabs.enabled": false,
-
   // Live Server
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
-
   // Prisma
   "prisma.showPrismaDataPlatformNotification": false,
-
   // Shopify Theme Check
   "themeCheck.checkOnChange": true,
   "themeCheck.checkOnOpen": true,
   "themeCheck.checkOnSave": true,
-
   // Workspace trust behavior
   "security.workspace.trust.untrustedFiles": "open"
 }
