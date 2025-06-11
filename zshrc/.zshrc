@@ -65,3 +65,6 @@ export PATH="$HOME/scripts:$PATH"
 # Use neovim as file editor
 export EDITOR=nvim
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
