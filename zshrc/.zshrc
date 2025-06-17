@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # Load NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
@@ -59,7 +60,7 @@ function ai_complete() {
   echo "$response"
 }
 
-# Add scripts in scripts folder to path 
+# Add scripts in scripts folder to path
 export PATH="$HOME/scripts:$PATH"
 
 # Use neovim as file editor
@@ -67,4 +68,22 @@ export EDITOR=nvim
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# FZF: Default command - ignore big hidden directories but include hidden files
+export FZF_DEFAULT_COMMAND='fd --hidden --type f --exclude .git --exclude .cache --exclude .local --exclude .npm --exclude node_modules'
+
+# FZF: Default options - preview using bat
+export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always {}'"
+
+# Optional alias: Full search (including hidden directories)
+alias fzf_all='fd --hidden --type f | fzf'
+
+# Enable Zoxide (cd command replacement)
+eval "$(zoxide init zsh)"
+
+# Aliases for terminal extensions
+alias cat="bat"
+alias l="eza --color=always --long --git --icons=always --group-directories-first --header"
+alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias cd="z"
 
