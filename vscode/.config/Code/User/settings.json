@@ -55,5 +55,6 @@
   "themeCheck.checkOnOpen": true,
   "themeCheck.checkOnSave": true,
   // Workspace trust behavior
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
