@@ -1,30 +1,24 @@
 #!/usr/bin/env bash
+set -euo pipefail
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:${PATH:-}"
 
-# Selecionar um wallpaper aleatório
-NEW_WP=$(ls "$HOME/.config/backgrounds" | shuf -n 1)
+REAL_HOME="${HOME:-}"
+if [ -z "$REAL_HOME" ] || [ ! -d "$REAL_HOME" ]; then
+  REAL_HOME="$(getent passwd "$(id -u)" | cut -d: -f6)"
+fi
+WALL_DIR="${WALL_DIR:-$REAL_HOME/.config/backgrounds}"
+WALL_DIR="$(readlink -f "$WALL_DIR" 2>/dev/null || printf '%s' "$WALL_DIR")"
 
-# Caminho completo do wallpaper
-WALLPAPER="$HOME/.config/backgrounds/$NEW_WP"
+mapfile -d '' WALLS < <(find -L "$WALL_DIR" -maxdepth 1 -type f -print0 2>/dev/null)
+if [ "${#WALLS[@]}" -eq 0 ]; then
+  exit 0
+fi
+WALLPAPER="${WALLS[RANDOM % ${#WALLS[@]}]}"
 
-# Caminho do arquivo de configuração
-HYPRPAPER_CONF="$HOME/.config/hypr/hyprpaper.conf"
+# Ensure hyprpaper is running.
+if ! pgrep -x hyprpaper >/dev/null 2>&1; then
+  hyprpaper >/dev/null 2>&1 &
+  sleep 0.4
+fi
 
-# Limpar o arquivo de configuração do hyprpaper
-echo "" > "$HYPRPAPER_CONF"
-echo "preload = $WALLPAPER" >> "$HYPRPAPER_CONF"
-
-# Pegar todos os monitores conectados
-DISPLAYS=$(hyprctl monitors | grep "Monitor" | awk '{print $2}')
-
-# Aplicar o wallpaper em todos
-for DISPLAY in $DISPLAYS; do
-  echo "wallpaper = $DISPLAY,$WALLPAPER" >> "$HYPRPAPER_CONF"
-done
-
-# Desativa splash
-echo "splash = false" >> "$HYPRPAPER_CONF"
-
-# Reinicia o Hyprpaper
-killall hyprpaper 2>/dev/null
-hyprpaper &
-
+"$REAL_HOME/.config/hypr/scripts/set-wallpaper.sh" "$WALLPAPER"
