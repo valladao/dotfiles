@@ -1,2 +1,79 @@
-background-opacity = 0.95
+# ==============================
+# GHOSTTY CONFIG
+# ==============================
 
+# =========================================
+# ☀️ LIGHT MODE — SACADA / DIA (ATIVO)
+# =========================================
+
+background-opacity = 1.0
+background = #f2e8d5
+foreground = #2a2a2a
+cursor-color = #000000
+selection-background = #d6cbb5
+selection-foreground = #000000
+
+palette = 0=#2a2a2a
+palette = 1=#b94a48
+palette = 2=#5f7a3e
+palette = 3=#b58900
+palette = 4=#3b6ea8
+palette = 5=#8a5a8c
+palette = 6=#4b8b8b
+palette = 7=#444444
+palette = 8=#6b6b6b
+palette = 9=#d96c6c
+palette = 10=#7f9f5f
+palette = 11=#d4aa00
+palette = 12=#5b8ec8
+palette = 13=#a87aa8
+palette = 14=#6baaaa
+palette = 15=#222222
+
+
+# =========================================
+# 🌙 DARK MODE — NOITE / INDOOR
+# (COMENTE O BLOCO ACIMA E ATIVE ESTE)
+# =========================================
+
+# background-opacity = 0.95
+# background = #1e1e2e
+# foreground = #cdd6f4
+# cursor-color = #f5e0dc
+# selection-background = #45475a
+# selection-foreground = #ffffff
+
+# palette = 0=#1e1e2e
+# palette = 1=#f38ba8
+# palette = 2=#a6e3a1
+# palette = 3=#f9e2af
+# palette = 4=#89b4fa
+# palette = 5=#cba6f7
+# palette = 6=#94e2d5
+# palette = 7=#bac2de
+# palette = 8=#6c7086
+# palette = 9=#f38ba8
+# palette = 10=#a6e3a1
+# palette = 11=#f9e2af
+# palette = 12=#89b4fa
+# palette = 13=#cba6f7
+# palette = 14=#94e2d5
+# palette = 15=#a6adc8
+
+
+# =========================================
+# 🔤 FONT — COMUM PARA AMBOS
+# =========================================
+
+font-size = 14
+
+# font-family = "JetBrains Mono"
+
+
+# =========================================
+# ⚙️ EXTRAS
+# =========================================
+
+background-blur = 0
+window-padding-x = 6
+window-padding-y = 6
