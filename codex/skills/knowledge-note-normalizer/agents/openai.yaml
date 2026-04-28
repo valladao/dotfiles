@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Note Normalizer"
+  short_description: "Padroniza entradas em notas Markdown"
+  default_prompt: "Use $knowledge-note-normalizer to turn this input into a concise Markdown knowledge note."
