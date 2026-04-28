@@ -1,7 +1,7 @@
 {
   // Startup
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorTheme": "Light Modern",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "window.zoomLevel": 1,

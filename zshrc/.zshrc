@@ -86,4 +86,3 @@ alias cat="bat"
 alias l="eza --color=always --long --git --icons=always --group-directories-first --header"
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias cd="z"
-
