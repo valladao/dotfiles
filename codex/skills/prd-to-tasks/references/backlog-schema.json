@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BacklogPlan",
+  "type": "object",
+  "required": ["source_prd", "milestones", "epics"],
+  "properties": {
+    "source_prd": { "type": "string" },
+    "target_release": { "type": "string" },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "epics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "priority", "stories"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "outcome": { "type": "string" },
+          "prd_links": { "type": "array", "items": { "type": "string" } },
+          "priority": { "enum": ["P0", "P1", "P2"] },
+          "stories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "priority", "effort", "tasks"],
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "user_value": { "type": "string" },
+                "acceptance_criteria": { "type": "array", "items": { "type": "string" } },
+                "priority": { "enum": ["P0", "P1", "P2"] },
+                "effort": { "enum": ["XS", "S", "M", "L", "XL"] },
+                "dependencies": { "type": "array", "items": { "type": "string" } },
+                "tasks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "title", "owner", "effort"],
+                    "properties": {
+                      "id": { "type": "string" },
+                      "title": { "type": "string" },
+                      "owner": { "type": "string" },
+                      "effort": { "enum": ["XS", "S", "M", "L", "XL"] },
+                      "depends_on": { "type": "array", "items": { "type": "string" } }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
