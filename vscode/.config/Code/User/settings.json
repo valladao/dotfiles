@@ -16,6 +16,7 @@
   "editor.snippetSuggestions": "top",
   // File handling
   "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
   "files.autoSave": "afterDelay",
   "files.associations": {
     "*.liquid": "liquid"
