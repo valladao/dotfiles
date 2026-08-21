@@ -3,9 +3,12 @@
   "margin-top": 8,
   "margin-right": 8,
   "margin-left": 8,
-  "modules-left": ["hyprland/workspaces", "cpu", "memory", "temperature","custom/wallpaper"],
+  "modules-left": ["ext/workspaces", "cpu", "memory", "temperature","custom/wallpaper"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock","tray"],
+  "ext/workspaces": {
+    "on-click": "activate"
+  },
   "custom/wallpaper": {
     "format": "",
     "on-click": "~/.config/hypr/scripts/wallpapers.sh"
@@ -64,4 +67,3 @@
     "on-click": "pavucontrol"
   }
 }
-
