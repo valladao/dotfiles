@@ -177,7 +177,7 @@ hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("env LIBVA_DRIVER_NAME=iHD brave --enable-features=UseOzonePlatform,VaapiVideoDecoder --ozone-platform=wayland --ignore-gpu-blocklist"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("env LIBVA_DRIVER_NAME=iHD brave-origin --enable-features=UseOzonePlatform,VaapiVideoDecoder --ozone-platform=wayland --ignore-gpu-blocklist"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("/home/valladao/.local/bin/geany"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
